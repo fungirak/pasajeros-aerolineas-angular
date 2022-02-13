@@ -1,0 +1,45 @@
+
+
+<div class="container mt-3">
+<table class="table table-primary border border-dark border-1 shadow">
+  <div class="">
+    <div class="d-flex justify-content-around ">
+      <span class="col-2 text-center bg-white fw-bold">#</span>
+      <span class="col-2 text-center bg-white  fw-bold">Nombre</span>
+      <span class="col-2 text-center bg-white  fw-bold">Aerolinea</span>
+      <span class="col-2 text-center bg-white  fw-bold">Origen</span>
+      <span class="col-2 text-center bg-white  fw-bold">Accion</span>
+    </div>
+  </div>
+  <tbody >
+
+    <div *ngFor="let pasajero of pageSlice ">
+      <tr class="d-flex justify-content-around">
+        <td class="col-2 ">{{pasajero._id}}</td>
+        <td class="col-2 ms-5">{{pasajero.name}}</td>
+        <td class="col-2 ms-5">{{pasajero.airline[0].name}}</td>
+        <td class="col-2 ms-5">{{pasajero.airline[0].country}}</td>
+        <td class="col-2 ">
+            <button (click)="guardarID(pasajero._id)" class="btn btn-sm btn-primary text-light fw-bold" [routerLink]="['/passengers/' + pasajero._id]" > + Detalles del Pasajero</button>
+        </td>
+      </tr>
+    </div>
+
+  </tbody>
+</table>
+
+
+
+<mat-paginator [length]="this.misPasajeros.data.length"
+              [pageSize]="10"
+              [pageSizeOptions]= "[10]"
+              (page)="changePage($event)">
+</mat-paginator>
+
+
+
+
+</div>
+
+
+

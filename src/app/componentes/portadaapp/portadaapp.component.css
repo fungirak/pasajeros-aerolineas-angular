@@ -1,0 +1,11 @@
+.imagen-fluid{
+ background-image: url("/assets/media/avion.jpg");
+ background-position:  center top;
+ background-size: 100% auto;
+ background-repeat: no-repeat;
+}
+.altura-90{
+  height: 90vh;
+}
+
+
