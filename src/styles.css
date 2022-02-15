@@ -2,3 +2,10 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.imagen-fluid{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./assets/media/avion.jpg");
+  background-position:  center top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+ }
