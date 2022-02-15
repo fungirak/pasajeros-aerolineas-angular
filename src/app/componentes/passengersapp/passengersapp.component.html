@@ -1,10 +1,11 @@
 
 
 <div class="container mt-3">
+  <h2 class="text-center p-3 m-3 shadow rounded">LISTADO DE PASAJEROS</h2>
 <table class="table table-primary border border-dark border-1 shadow">
   <div class="">
     <div class="d-flex justify-content-around ">
-      <span class="col-2 text-center bg-white fw-bold">#</span>
+      <span class="col-2 text-center bg-white fw-bold">#ID</span>
       <span class="col-2 text-center bg-white  fw-bold">Nombre</span>
       <span class="col-2 text-center bg-white  fw-bold">Aerolinea</span>
       <span class="col-2 text-center bg-white  fw-bold">Origen</span>
@@ -14,11 +15,11 @@
   <tbody >
 
     <div *ngFor="let pasajero of pageSlice ">
-      <tr class="d-flex justify-content-around">
+      <tr class="d-flex justify-content-around text-center">
         <td class="col-2 ">{{pasajero._id}}</td>
-        <td class="col-2 ms-5">{{pasajero.name}}</td>
-        <td class="col-2 ms-5">{{pasajero.airline[0].name}}</td>
-        <td class="col-2 ms-5">{{pasajero.airline[0].country}}</td>
+        <td class="col-2 ">{{pasajero.name}}</td>
+        <td class="col-2 ">{{pasajero.airline[0].name}}</td>
+        <td class="col-2 ">{{pasajero.airline[0].country}}</td>
         <td class="col-2 ">
             <button (click)="guardarID(pasajero._id)" class="btn btn-sm btn-primary text-light fw-bold" [routerLink]="['/passengers/' + pasajero._id]" > + Detalles del Pasajero</button>
         </td>

@@ -1,24 +1,25 @@
 <div class="container mt-3">
+  <h2 class="text-center p-3 m-3 shadow rounded">DETALLES DEL PASAJERO: <span class="text-primary"> {{pasajeroID._id}} </span></h2>
   <table class="table table-success border border-dark border-1 shadow">
     <div class="">
-      <div class="d-flex justify-content-around">
-        <span class="col-2 text-center bg-white fw-bold">#</span>
-        <span class="col-2 text-center bg-white  fw-bold">Nombre</span>
-        <span class="col-2 text-center bg-white  fw-bold">N° de Viajes</span>
-        <span class="col-2 text-center bg-white  fw-bold ">Aerolinea</span>
-        <span class="col-2 text-center bg-white  fw-bold">Logo Aerolinea</span>
-        <span class="col-2 text-center bg-white  fw-bold">Web Aerolinea</span>
+      <div class="d-flex justify-content-around bg-white fw-bold text-center" >
+        <span class="col-2  ">#ID</span>
+        <span class="col-2   ">Nombre</span>
+        <span class="col-2   ">N° de Viajes</span>
+        <span class="col-2    ">Aerolinea</span>
+        <span class="col-2   ">Logo Aerolinea</span>
+        <span class="col-2   ">Web Aerolinea</span>
       </div>
     </div>
     <tbody >
       <div>
-        <tr class="d-flex justify-content-around">
-          <td class="col-2 ms-2">{{pasajeroID._id}}</td>
-          <td class="col-2 ms-5">{{pasajeroID.name}}</td>
-          <td class="col-2">{{pasajeroID.trips}}</td>
-          <td class="col-2 ">{{pasajeroID.airline[0].name}}</td>
+        <tr class="d-flex justify-content-around text-center">
+          <td class="col-2">{{pasajeroID._id}}</td>
+          <td class="col-2 ">{{pasajeroID.name}}</td>
+          <td class="col-2 ">{{pasajeroID.trips}}</td>
+          <td class="col-2">{{pasajeroID.airline[0].name}}</td>
           <img class="col-2  logo-sm" src={{pasajeroID.airline[0].logo}} />
-          <td class="col-2 ms-5">{{pasajeroID.airline[0].website}}</td>
+          <td class="col-2">{{pasajeroID.airline[0].website}}</td>
         </tr>
       </div>
     </tbody>
