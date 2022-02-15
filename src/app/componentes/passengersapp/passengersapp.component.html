@@ -13,7 +13,7 @@
     </div>
   </div>
   <tbody >
-
+    <div *ngIf="cargado">
     <div *ngFor="let pasajero of pageSlice ">
       <tr class="d-flex justify-content-around text-center">
         <td class="col-2 ">{{pasajero._id}}</td>
@@ -25,11 +25,13 @@
         </td>
       </tr>
     </div>
+  </div>
 
   </tbody>
+
 </table>
 
-
+<div *ngIf="!cargado" class="p-3 text-center fw-bold  m-2">Loading...</div>
 
 <mat-paginator [length]="this.misPasajeros.data.length"
               [pageSize]="10"
