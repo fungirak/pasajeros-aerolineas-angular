@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import {MatPaginatorModule} from '@angular/material/paginator';
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';

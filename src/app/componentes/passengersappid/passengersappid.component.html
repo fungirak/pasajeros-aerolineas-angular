@@ -1,4 +1,5 @@
 <div class="container mt-3">
+  <h2 class="text-center m-4 fw-bold shadow rounded p-3">DETALLES DEL PASAJERO: {{pasajeroID._id}}</h2>
   <table class="table table-success border border-dark border-1 shadow">
     <div class="">
       <div class="d-flex justify-content-around">
@@ -12,9 +13,9 @@
     </div>
     <tbody >
       <div>
-        <tr class="d-flex justify-content-around">
+        <tr class="d-flex justify-content-around text-center">
           <td class="col-2 ms-2">{{pasajeroID._id}}</td>
-          <td class="col-2 ms-5">{{pasajeroID.name}}</td>
+          <td class="col-2 ">{{pasajeroID.name}}</td>
           <td class="col-2">{{pasajeroID.trips}}</td>
           <td class="col-2 ">{{pasajeroID.airline[0].name}}</td>
           <img class="col-2  logo-sm" src={{pasajeroID.airline[0].logo}} />
