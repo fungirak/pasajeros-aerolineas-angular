@@ -20,7 +20,7 @@
           <td class="col-2 ">{{pasajeroID.trips}}</td>
           <td class="col-2">{{pasajeroID.airline[0].name}}</td>
           <img class="col-2  logo-sm" src={{pasajeroID.airline[0].logo}} />
-          <td class="col-2">{{pasajeroID.airline[0].website}}</td>
+          <td class="col-2"><a href="https://{{pasajeroID.airline[0].website}}" target="_blank" rel="noopener noreferrer">{{pasajeroID.airline[0].website}}</a></td>
         </tr>
       </div>
     </tbody>
