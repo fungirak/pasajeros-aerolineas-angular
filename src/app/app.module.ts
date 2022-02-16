@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import {MatPaginatorModule} from '@angular/material/paginator';
-
+import { LlamadaApiService } from './services/llamada-api.service';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -35,7 +35,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ]),
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    LlamadaApiService
+  ],
   bootstrap: [AppComponent]
 })
 

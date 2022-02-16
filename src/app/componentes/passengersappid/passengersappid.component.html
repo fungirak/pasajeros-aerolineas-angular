@@ -1,25 +1,26 @@
+
 <div class="container mt-3">
-  <h2 class="text-center m-4 fw-bold shadow rounded p-3">DETALLES DEL PASAJERO: {{pasajeroID._id}}</h2>
+  <h2 class="text-center p-3 m-3 shadow rounded bg-white">DETALLES DEL PASAJERO: <span class="text-primary"> {{pasajeroID._id}} </span></h2>
   <table class="table table-success border border-dark border-1 shadow">
     <div class="">
-      <div class="d-flex justify-content-around">
-        <span class="col-2 text-center bg-white fw-bold">#</span>
-        <span class="col-2 text-center bg-white  fw-bold">Nombre</span>
-        <span class="col-2 text-center bg-white  fw-bold">N° de Viajes</span>
-        <span class="col-2 text-center bg-white  fw-bold ">Aerolinea</span>
-        <span class="col-2 text-center bg-white  fw-bold">Logo Aerolinea</span>
-        <span class="col-2 text-center bg-white  fw-bold">Web Aerolinea</span>
+      <div class="d-flex justify-content-around bg-white fw-bold text-center" >
+        <span class="col-2 bg-white ">#ID</span>
+        <span class="col-2 bg-white  ">Nombre</span>
+        <span class="col-2 bg-white  ">N° de Viajes</span>
+        <span class="col-2 bg-white   ">Aerolinea</span>
+        <span class="col-2 bg-white  ">Logo Aerolinea</span>
+        <span class="col-2 bg-white ">Web Aerolinea</span>
       </div>
     </div>
     <tbody >
       <div>
         <tr class="d-flex justify-content-around text-center">
-          <td class="col-2 ms-2">{{pasajeroID._id}}</td>
+          <td class="col-2">{{pasajeroID._id}}</td>
           <td class="col-2 ">{{pasajeroID.name}}</td>
-          <td class="col-2">{{pasajeroID.trips}}</td>
-          <td class="col-2 ">{{pasajeroID.airline[0].name}}</td>
+          <td class="col-2 ">{{pasajeroID.trips}}</td>
+          <td class="col-2">{{pasajeroID.airline[0].name}}</td>
           <img class="col-2  logo-sm" src={{pasajeroID.airline[0].logo}} />
-          <td class="col-2 ms-5">{{pasajeroID.airline[0].website}}</td>
+          <td class="col-2">{{pasajeroID.airline[0].website}}</td>
         </tr>
       </div>
     </tbody>
